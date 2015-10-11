@@ -20,21 +20,33 @@ import java.util.Scanner;
 public class Peamurdja3_laevad {
     public static void main(String[] args) {
         ArrayList laevad = new ArrayList();
+        ArrayList kontroll = new ArrayList();
 
         for (int j = 0; j < 10; j++) {
             laevad.add((int) (Math.random() * 2));
+            kontroll.add((int) 0);
         }
+        ArrayList laevad2 = laevad;
 
         Boolean saipihta = Boolean.TRUE;
 
         while (saipihta) {
-            int koht = kysimus();
-            Object väärtus = laevad.get(koht - 1);
+            Double koht2 = kysimus();
+            int koht = koht2.intValue();
 
-            if (väärtus.equals(1)) {
-                System.out.println("Vaenlase laev sai pihta! Elagu piraadid!");
-                System.out.println(laevad);
-                break;
+            if (koht > 10 || koht < 0) {
+                System.out.println("Vali number 1 kuni 10 vahel!");
+                continue;
+            }
+            int väärtus = (int) laevad.get(koht - 1);
+
+            if (väärtus == 1) {
+                System.out.println("Vaenlase laev sai pihta! Leia järgmine laev");
+                laevad2.set(koht-1, 0);
+                if (laevad2.equals(kontroll)){
+                    System.out.println("Elagu piraadid. Laevad on uputatud!");
+                    break;
+                }
             } else {
                 System.out.println("Proovi uuesti!");
             }
@@ -42,10 +54,15 @@ public class Peamurdja3_laevad {
 
     }
 
-    public static int kysimus (){
+    public static double kysimus (){
         Scanner kuslaev = new Scanner(System.in);
         System.out.println("Mitmendal kohal asub vaenlase laev?");
-        int koht = kuslaev.nextInt();
+        Double koht = kuslaev.nextDouble();
+        if (koht == Double){
+
+
+        }
         return koht;
+
     }
 }

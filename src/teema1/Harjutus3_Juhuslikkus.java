@@ -21,6 +21,9 @@ package teema1;
  */
 public class Harjutus3_Juhuslikkus {
     public static void main(String[] args) {
+        int number = 2;
+        String tulemus;
+        tulemus = number.getClass().getName();
 
     }
 }
