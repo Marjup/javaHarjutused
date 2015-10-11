@@ -1,6 +1,8 @@
 package teema1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -16,4 +18,34 @@ import java.util.Scanner;
  *    nii vertikaalselt kui ka horisontaalselt?
  */
 public class Peamurdja3_laevad {
+    public static void main(String[] args) {
+        ArrayList laevad = new ArrayList();
+
+        for (int j = 0; j < 10; j++) {
+            laevad.add((int) (Math.random() * 2));
+        }
+
+        Boolean saipihta = Boolean.TRUE;
+
+        while (saipihta) {
+            int koht = kysimus();
+            Object väärtus = laevad.get(koht - 1);
+
+            if (väärtus.equals(1)) {
+                System.out.println("Vaenlase laev sai pihta! Elagu piraadid!");
+                System.out.println(laevad);
+                break;
+            } else {
+                System.out.println("Proovi uuesti!");
+            }
+        }
+
+    }
+
+    public static int kysimus (){
+        Scanner kuslaev = new Scanner(System.in);
+        System.out.println("Mitmendal kohal asub vaenlase laev?");
+        int koht = kuslaev.nextInt();
+        return koht;
+    }
 }
