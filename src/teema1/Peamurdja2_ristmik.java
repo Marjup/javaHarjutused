@@ -17,35 +17,39 @@ public class Peamurdja2_ristmik extends Application {
         Foor foor3 = new Foor(Foor.PAREM, primaryStage);
         Foor foor4 = new Foor(Foor.ALUMINE, primaryStage);
 
-        int count = 0;
-        
-        while (count < 5){
-            foor1.syytaPunane();
-            foor1.paus(1);
-            foor1.syytaKollane();
-            foor1.paus(1);
-            foor1.kustutaPunane();
-            foor1.kustutaKollane();
-            foor1.syytaRoheline();
-            foor1.paus(1);
-            foor1.kustutaRoheline();
-            foor1.paus(0.2);
-            foor1.syytaRoheline();
-            foor1.paus(0.2);
-            foor1.kustutaRoheline();
-            foor1.paus(0.2);
-            foor1.syytaRoheline();
-            foor1.paus(0.2);
-            foor1.kustutaRoheline();
-            foor1.paus(0.2);
-            foor1.syytaRoheline();
-            foor1.paus(0.2);
-            foor1.kustutaRoheline();
-            foor1.syytaKollane();
-            foor1.paus(1);
-            foor1.kustutaKollane();
-            foor1.paus(0.5);
-            count = count + 1;
-        }
+        Ristmik(foor1);
+        Ristmik(foor2);
+        Ristmik(foor3);
+        Ristmik(foor4);
     }
+
+    public void Ristmik(Foor foorike){
+        foorike.syytaPunane();
+        foorike.paus(4);
+        foorike.syytaKollane();
+        foorike.paus(1);
+        foorike.kustutaPunane();
+        foorike.kustutaKollane();
+        foorike.syytaRoheline();
+        foorike.paus(4);
+        foorike.kustutaRoheline();
+        foorike.paus(0.5);
+        foorike.syytaRoheline();
+        foorike.paus(0.5);
+        foorike.kustutaRoheline();
+        foorike.paus(0.5);
+        foorike.syytaRoheline();
+        foorike.paus(0.5);
+        foorike.kustutaRoheline();
+        foorike.paus(0.5);
+        foorike.syytaRoheline();
+        foorike.paus(0.5);
+        foorike.kustutaRoheline();
+        foorike.paus(0.6);
+        foorike.syytaKollane();
+        foorike.paus(0.6);
+        foorike.kustutaKollane();
+        foorike.paus(0.5);
+    }
+
 }

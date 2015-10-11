@@ -28,25 +28,33 @@ public class Peamurdja1_foor extends Application {
 
         while (count < 5){
             foor.syytaPunane();
-            foor.paus(1);
+            foor.paus(4);
             foor.syytaKollane();
             foor.paus(1);
             foor.kustutaPunane();
             foor.kustutaKollane();
             foor.syytaRoheline();
-            foor.paus(1);
+            foor.paus(4);
             foor.kustutaRoheline();
             foor.paus(0.5);
+            foor.syytaRoheline();
+            foor.paus(0.5);
+            foor.kustutaRoheline();
+            foor.paus(0.5);
+            foor.syytaRoheline();
+            foor.paus(0.5);
+            foor.kustutaRoheline();
+            foor.paus(0.5);
+            foor.syytaRoheline();
+            foor.paus(0.5);
+            foor.kustutaRoheline();
+            foor.paus(0.6);
             foor.syytaKollane();
-            foor.paus(1);
+            foor.paus(0.6);
             foor.kustutaKollane();
             foor.paus(0.5);
             count = count + 1;
         }
-
-        foor.syytaPunane();
-        foor.paus(1);
-        foor.kustutaPunane();
 
     }
 }

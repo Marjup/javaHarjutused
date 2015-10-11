@@ -19,6 +19,9 @@ package teema1;
 public class Harjutus1_tsyklid {
     public static void main(String[] args) {
         int count = 0;
+        count = 4;
+        int value = count % 2;
+        System.out.println(value);
 
     }
 }
