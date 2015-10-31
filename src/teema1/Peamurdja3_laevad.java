@@ -17,7 +17,34 @@ import java.util.Scanner;
  * 3. Kas oskad ka nii, et laevad ei ole 1x1 vaid 1x2 ja 1x3 ja orienteeruvad
  *    nii vertikaalselt kui ka horisontaalselt?
  */
-public class Peamurdja3_laevad {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*public class Peamurdja3_laevad {
     public static void main(String[] args) {
         ArrayList laevad = new ArrayList();
         ArrayList kontroll = new ArrayList();
@@ -56,13 +83,18 @@ public class Peamurdja3_laevad {
 
     public static double kysimus (){
         Scanner kuslaev = new Scanner(System.in);
-        System.out.println("Mitmendal kohal asub vaenlase laev?");
-        Double koht = kuslaev.nextDouble();
-        if (koht == Double){
-
-
-        }
+        int number = 0;
+        Double koht;
+        do {
+            System.out.println("Mitmendal kohal asub vaenlase laev?");
+            while (!kuslaev.hasNextDouble() || kuslaev.nextDouble() > 10 || kuslaev.nextDouble() < 0){
+                System.out.println("Vale sisestus! Palun sisesta number 1 ja 10 vahel");
+                kuslaev.next();
+            }
+            koht = kuslaev.nextDouble();
+        } while (number == 0);
         return koht;
 
     }
-}
+}*/
+

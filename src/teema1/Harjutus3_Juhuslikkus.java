@@ -19,11 +19,3 @@ package teema1;
  *    (arvutile), arvutab mõlema mängija silmade summad ja teatab,
  *    kellel oli rohkem.
  */
-public class Harjutus3_Juhuslikkus {
-    public static void main(String[] args) {
-        int number = 2;
-        String tulemus;
-        tulemus = number.getClass().getName();
-
-    }
-}
